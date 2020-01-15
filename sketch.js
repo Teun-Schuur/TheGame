@@ -1,5 +1,5 @@
 let cols, rows;
-let w = 50;
+let w = 80;
 let grid = [];
 let current;
 let stack = [];
@@ -37,9 +37,9 @@ function setup() {
 function draw() {
   background(51);
   checkKey()
-  translate(-worldCamera.x, -worldCamera.y, -worldCamera.z);
+  translate(0, 0, -worldCamera.z);
   for (let i = 0; i < grid.length; i++) {
-    grid[i].show();
+    grid[i].show(-worldCamera.x, -worldCamera.y);
   }
 }
 

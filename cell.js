@@ -41,9 +41,10 @@ function Cell(i, j) {
     rect(x, y, w, w);
   };
 
-  this.show = function() {
-    let x = this.i * w;
-    let y = this.j * w;
+
+  this.show = function(xs, ys) {
+    let x = this.i * w + xs;
+    let y = this.j * w + ys;
     stroke(255);
     if (this.walls[0]) {
       line(x, y, x + w, y);
